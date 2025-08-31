@@ -1,0 +1,28 @@
+{
+  "name": "rupp-institute",
+  "version": "1.0.0",
+  "description": "This repo contains the Astro site. Visily design references live in \\design/visily\\.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kongulu/rupp-institute.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kongulu/rupp-institute/issues"
+  },
+  "homepage": "https://github.com/Kongulu/rupp-institute#readme",
+  "type": "module",
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.13.5"
+  }
+}

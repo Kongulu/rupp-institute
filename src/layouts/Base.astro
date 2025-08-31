@@ -1,0 +1,16 @@
+---
+import "@/styles/main.css";
+const { title = "Rupp Institute" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <main class="max-w-4xl mx-auto p-6">
+      <slot />
+    </main>
+  </body>
+</html>
