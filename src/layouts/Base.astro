@@ -1,5 +1,7 @@
 ---
 import "@/styles/main.css";
+import Nav from "@/components/Nav.astro";
+import Footer from "@/components/Footer.astro";
 const { title = "Rupp Institute" } = Astro.props;
 ---
 <html lang="en">
@@ -7,10 +9,13 @@ const { title = "Rupp Institute" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body class="min-h-screen bg-white text-slate-900">
     <main class="max-w-4xl mx-auto p-6">
+      <Nav />
       <slot />
+      <Footer />
     </main>
   </body>
 </html>
