@@ -3,194 +3,199 @@ import Base from "@/layouts/Base.astro";
 ---
 
 <Base title="Account Profile">
-  <section class="bg-brandWhite text-brandGray rounded-xl shadow-panel p-6 sm:p-8">
-    <!-- Title -->
-    <header class="mb-6">
-      <h1 class="text-2xl font-semibold">Profile</h1>
-      <p class="text-sm text-brandGray/80">Update your profile information and manage your account.</p>
-    </header>
+  <!-- PAGE background -->
+  <section class="min-h-screen bg-brandPink py-8">
+    <!-- MAIN CARD -->
+    <div class="mx-auto max-w-5xl">
+      <div class="bg-brandWhite text-brandGray rounded-xl shadow-panel p-6 sm:p-8 border border-borderFx">
+        <!-- Title -->
+        <header class="mb-6">
+          <h1 class="text-2xl font-semibold">Profile</h1>
+          <p class="text-sm text-brandGray/80">Update your profile information and manage your account.</p>
+        </header>
 
-    <!-- PROFILE -->
-    <div class="grid gap-6 sm:grid-cols-2">
-      <label class="block">
-        <span class="text-sm">Full name</span>
-        <input class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="John Doe" />
-      </label>
-      <label class="block">
-        <span class="text-sm">Display name</span>
-        <input class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="johndoe" />
-      </label>
-      <label class="block">
-        <span class="text-sm">Email</span>
-        <input type="email" class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="john@example.com" />
-      </label>
-      <div class="grid grid-cols-2 gap-4">
-        <label class="block">
-          <span class="text-sm">Timezone</span>
-          <select class="mt-1 w-full border border-borderFx rounded px-3 py-2">
-            <option>UTC</option><option>UTC-5 (Eastern)</option><option>UTC+1 (Central Europe)</option>
-          </select>
-        </label>
-        <label class="block">
-          <span class="text-sm">Locale</span>
-          <select class="mt-1 w-full border border-borderFx rounded px-3 py-2">
-            <option>English (United States)</option><option>English (United Kingdom)</option>
-          </select>
-        </label>
+        <!-- PROFILE -->
+        <div class="grid gap-6 sm:grid-cols-2">
+          <label class="block">
+            <span class="text-sm">Full name</span>
+            <input class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="John Doe" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Display name</span>
+            <input class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="johndoe" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Email</span>
+            <input type="email" class="mt-1 w-full border border-borderFx rounded px-3 py-2" placeholder="john@example.com" />
+          </label>
+          <div class="grid grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm">Timezone</span>
+              <select class="mt-1 w-full border border-borderFx rounded px-3 py-2">
+                <option>UTC</option><option>UTC-5 (Eastern)</option><option>UTC+1 (Central Europe)</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-sm">Locale</span>
+              <select class="mt-1 w-full border border-borderFx rounded px-3 py-2">
+                <option>English (United States)</option><option>English (United Kingdom)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-5 flex gap-3">
+          <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Save changes</button>
+          <button class="px-4 py-2 border border-borderFx rounded">Cancel</button>
+        </div>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- SECURITY -->
+        <section aria-labelledby="security" class="space-y-4">
+          <h2 id="security" class="text-xl font-semibold">Security</h2>
+
+          <div class="grid gap-6 sm:grid-cols-3">
+            <label class="block">
+              <span class="text-sm">Current password</span>
+              <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
+            </label>
+            <label class="block">
+              <span class="text-sm">New password</span>
+              <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
+            </label>
+            <label class="block">
+              <span class="text-sm">Confirm new password</span>
+              <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
+            </label>
+          </div>
+
+          <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Update password</button>
+        </section>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- TWO-FACTOR -->
+        <section aria-labelledby="twofa" class="space-y-4">
+          <h2 id="twofa" class="text-xl font-semibold">Two-Factor Authentication</h2>
+
+          <div class="flex items-center justify-between">
+            <p class="text-sm">Enable authenticator app</p>
+            <span role="switch" aria-checked="true" tabindex="0"
+              class="inline-flex h-5 w-9 items-center rounded-full bg-brandRed transition">
+              <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-4 transition-transform"></span>
+            </span>
+          </div>
+
+          <div class="rounded border border-borderFx p-4">
+            <p class="text-sm text-brandGray/80">Scan this QR code with your authenticator app (placeholder).</p>
+            <div class="mt-3 h-32 w-32 bg-brandPink rounded"></div>
+          </div>
+        </section>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- SESSIONS -->
+        <section aria-labelledby="sessions" class="space-y-4">
+          <h2 id="sessions" class="text-xl font-semibold">Sessions</h2>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm">
+              <thead class="text-left border-b border-borderFx">
+                <tr>
+                  <th class="py-2 pr-4">Device</th>
+                  <th class="py-2 pr-4">Location</th>
+                  <th class="py-2 pr-4">IP</th>
+                  <th class="py-2 pr-4">Last active</th>
+                  <th class="py-2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-borderFx">
+                  <td class="py-2 pr-4">Windows PC (Edge)</td>
+                  <td class="py-2 pr-4">Zurich, CH</td>
+                  <td class="py-2 pr-4">203.0.113.2</td>
+                  <td class="py-2 pr-4">2h ago</td>
+                  <td class="py-2"><button class="px-3 py-1 border border-borderFx rounded">Sign out</button></td>
+                </tr>
+                <tr class="border-b border-borderFx">
+                  <td class="py-2 pr-4">iPhone</td>
+                  <td class="py-2 pr-4">Zurich, CH</td>
+                  <td class="py-2 pr-4">203.0.113.7</td>
+                  <td class="py-2 pr-4">1d ago</td>
+                  <td class="py-2"><button class="px-3 py-1 border border-borderFx rounded">Sign out</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Sign out all other sessions</button>
+        </section>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- NOTIFICATIONS -->
+        <section aria-labelledby="notifications" class="space-y-4">
+          <h2 id="notifications" class="text-xl font-semibold">Notifications</h2>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm">Email notifications</span>
+              <span role="switch" aria-checked="true" tabindex="0"
+                class="inline-flex h-5 w-9 items-center rounded-full bg-brandRed transition">
+                <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-4 transition-transform"></span>
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm">In-app notifications</span>
+              <span role="switch" aria-checked="false" tabindex="0"
+                class="inline-flex h-5 w-9 items-center rounded-full bg-borderFx transition">
+                <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-1 transition-transform"></span>
+              </span>
+            </div>
+          </div>
+
+          <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Save preferences</button>
+        </section>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- PRIVACY & DATA -->
+        <section aria-labelledby="privacy" class="space-y-4">
+          <h2 id="privacy" class="text-xl font-semibold">Privacy & Data</h2>
+
+          <label class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1" />
+            <span class="text-sm">Allow anonymous analytics to improve the product.</span>
+          </label>
+          <div class="flex gap-3">
+            <button class="px-4 py-2 border border-borderFx rounded">Export data</button>
+            <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Delete account</button>
+          </div>
+        </section>
+
+        <hr class="my-8 border-borderFx" />
+
+        <!-- CONNECTED APPS -->
+        <section aria-labelledby="apps" class="space-y-4">
+          <h2 id="apps" class="text-xl font-semibold">Connected Apps</h2>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="h-6 w-6 rounded bg-borderFx"></div>
+              <span>Google</span>
+            </div>
+            <button class="px-4 py-2 border border-borderFx rounded">Disconnect</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="h-6 w-6 rounded bg-borderFx"></div>
+              <span>GitHub</span>
+            </div>
+            <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Connect</button>
+          </div>
+        </section>
       </div>
     </div>
-
-    <div class="mt-5 flex gap-3">
-      <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Save changes</button>
-      <button class="px-4 py-2 border border-borderFx rounded">Cancel</button>
-    </div>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- SECURITY -->
-    <section aria-labelledby="security" class="space-y-4">
-      <h2 id="security" class="text-xl font-semibold">Security</h2>
-
-      <div class="grid gap-6 sm:grid-cols-3">
-        <label class="block">
-          <span class="text-sm">Current password</span>
-          <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
-        </label>
-        <label class="block">
-          <span class="text-sm">New password</span>
-          <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
-        </label>
-        <label class="block">
-          <span class="text-sm">Confirm new password</span>
-          <input type="password" class="mt-1 w-full border border-borderFx rounded px-3 py-2" />
-        </label>
-      </div>
-
-      <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Update password</button>
-    </section>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- TWO-FACTOR -->
-    <section aria-labelledby="twofa" class="space-y-4">
-      <h2 id="twofa" class="text-xl font-semibold">Two-Factor Authentication</h2>
-
-      <div class="flex items-center justify-between">
-        <p class="text-sm">Enable authenticator app</p>
-        <!-- visual toggle (static) -->
-        <span role="switch" aria-checked="true" tabindex="0"
-          class="inline-flex h-5 w-9 items-center rounded-full bg-brandRed transition">
-          <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-4 transition-transform"></span>
-        </span>
-      </div>
-
-      <div class="rounded border border-borderFx p-4">
-        <p class="text-sm text-brandGray/80">Scan this QR code with your authenticator app (placeholder).</p>
-        <div class="mt-3 h-32 w-32 bg-brandPink rounded"></div>
-      </div>
-    </section>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- SESSIONS -->
-    <section aria-labelledby="sessions" class="space-y-4">
-      <h2 id="sessions" class="text-xl font-semibold">Sessions</h2>
-
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-sm">
-          <thead class="text-left border-b border-borderFx">
-            <tr>
-              <th class="py-2 pr-4">Device</th>
-              <th class="py-2 pr-4">Location</th>
-              <th class="py-2 pr-4">IP</th>
-              <th class="py-2 pr-4">Last active</th>
-              <th class="py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-borderFx">
-              <td class="py-2 pr-4">Windows PC (Edge)</td>
-              <td class="py-2 pr-4">Zurich, CH</td>
-              <td class="py-2 pr-4">203.0.113.2</td>
-              <td class="py-2 pr-4">2h ago</td>
-              <td class="py-2"><button class="px-3 py-1 border border-borderFx rounded">Sign out</button></td>
-            </tr>
-            <tr class="border-b border-borderFx">
-              <td class="py-2 pr-4">iPhone</td>
-              <td class="py-2 pr-4">Zurich, CH</td>
-              <td class="py-2 pr-4">203.0.113.7</td>
-              <td class="py-2 pr-4">1d ago</td>
-              <td class="py-2"><button class="px-3 py-1 border border-borderFx rounded">Sign out</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Sign out all other sessions</button>
-    </section>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- NOTIFICATIONS -->
-    <section aria-labelledby="notifications" class="space-y-4">
-      <h2 id="notifications" class="text-xl font-semibold">Notifications</h2>
-
-      <div class="space-y-3">
-        <div class="flex items-center justify-between">
-          <span class="text-sm">Email notifications</span>
-          <span role="switch" aria-checked="true" tabindex="0"
-            class="inline-flex h-5 w-9 items-center rounded-full bg-brandRed transition">
-            <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-4 transition-transform"></span>
-          </span>
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-sm">In-app notifications</span>
-          <span role="switch" aria-checked="false" tabindex="0"
-            class="inline-flex h-5 w-9 items-center rounded-full bg-borderFx transition">
-            <span class="h-4 w-4 bg-brandWhite rounded-full translate-x-1 transition-transform"></span>
-          </span>
-        </div>
-      </div>
-
-      <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Save preferences</button>
-    </section>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- PRIVACY & DATA -->
-    <section aria-labelledby="privacy" class="space-y-4">
-      <h2 id="privacy" class="text-xl font-semibold">Privacy & Data</h2>
-
-      <label class="flex items-start gap-3">
-        <input type="checkbox" class="mt-1" />
-        <span class="text-sm">Allow anonymous analytics to improve the product.</span>
-      </label>
-      <div class="flex gap-3">
-        <button class="px-4 py-2 border border-borderFx rounded">Export data</button>
-        <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Delete account</button>
-      </div>
-    </section>
-
-    <hr class="my-8 border-borderFx" />
-
-    <!-- CONNECTED APPS -->
-    <section aria-labelledby="apps" class="space-y-4">
-      <h2 id="apps" class="text-xl font-semibold">Connected Apps</h2>
-
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="h-6 w-6 rounded bg-borderFx"></div>
-          <span>Google</span>
-        </div>
-        <button class="px-4 py-2 border border-borderFx rounded">Disconnect</button>
-      </div>
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="h-6 w-6 rounded bg-borderFx"></div>
-          <span>GitHub</span>
-        </div>
-        <button class="px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Connect</button>
-      </div>
-    </section>
   </section>
 </Base>
