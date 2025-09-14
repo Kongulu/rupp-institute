@@ -1,7 +1,21 @@
 ---
 import Base from '@/layouts/Base.astro';
 ---
-<Base title="Private User Landing">
-  <h1 class="text-3xl font-semibold">Private User Landing</h1>
-  <p>Reference: design/visily/P_PrivateUserLanding</p>
+<Base title="Dashboard">
+  <section class="bg-ri-gradient min-h-screen flex items-center justify-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="bg-brandPink rounded-2xl p-8 min-h-[20vh] shadow-panel border border-borderFx">
+        <h1 class="font-serif text-3xl font-semibold text-brandRed mb-2">Welcome, Alex</h1>
+        <p class="text-brandGray mb-6">Choose a section to continue.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {['Podcasts','Blog','Metrics','Charts','Documents','Downloads','News','Alerts','Notes'].map(t =>
+            <a href="#" class="bg-brandWhite rounded border border-borderFx p-4 hover:shadow-panel transition">
+              <div class="font-medium text-brandGray">{t}</div>
+              <p class="text-sm text-brandGray">Short description…</p>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

@@ -7,8 +7,8 @@ const links = [
   { href: "/private/", label: "Private" }
 ];
 ---
-<nav class="flex items-center justify-between py-4">
-  <a href="/" class="text-lg font-semibold">Rupp Institute</a>
+<nav class="flex items-center justify-between py-4 border-b border-borderFx mb-8">
+   <a href="/" class="text-lg font-semibold">Rupp Institute</a>
   <ul class="flex gap-5">
     {links.map(l => <li><a class="hover:underline" href={l.href}>{l.label}</a></li>)}
   </ul>

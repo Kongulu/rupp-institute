@@ -1,12 +1,24 @@
 ---
 import Base from "@/layouts/Base.astro";
+const tiles = ['Podcasts','Blog','Metrics','Charts','Documents','Downloads','News','Alerts','Notes'];
 ---
-<Base title="Home">
-  <h1 class="text-3xl font-semibold mb-3">Welcome</h1>
-  <p class="mb-6">Built from Visily designs.</p>
-  <ul class="list-disc pl-6 space-y-1">
-    <li>Design refs: <code>design/visily/</code></li>
-    <li>Pages: <code>src/pages/</code></li>
-    <li>Components: <code>src/components/</code></li>
-  </ul>
+
+<Base title="Rupp Institute">
+  <section class="ri-hero-bg">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <h1 class="font-serif text-5xl font-semibold mb-6">Rupp<br/>Institute</h1>
+      <a href="/login"
+         class="inline-block px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">
+        Login
+      </a>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
+        {tiles.slice(0,4).map(t => (
+          <div class="h-28 bg-brandWhite rounded flex items-center justify-center shadow-panel border border-borderFx">
+            <span class="text-brandGray">{t}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 </Base>

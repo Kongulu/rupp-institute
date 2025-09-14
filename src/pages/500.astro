@@ -1,7 +1,15 @@
 ---
 import Base from "@/layouts/Base.astro";
 ---
-<Base title="Server Error">
-  <h1 class="text-3xl font-semibold">500 Server Error</h1>
-  <p>Reference: design/visily/U2_500</p>
+<Base title="500">
+  <section class="ri-hero-bg">
+    <div class="max-w-4xl mx-auto px-6 py-24 text-center">
+      <div class="font-serif text-8xl font-semibold">500</div>
+      <p class="mt-4 text-lg">Internal Server Error</p>
+      <div class="mt-8 space-x-3">
+        <a href="/" class="inline-block px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Home</a>
+        <a href="#" onclick="location.reload()" class="inline-block px-4 py-2 bg-brandRed hover:bg-brandRedDark text-brandWhite rounded">Retry</a>
+      </div>
+    </div>
+  </section>
 </Base>
